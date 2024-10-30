@@ -1,15 +1,15 @@
-// src/components/ProfilePage.tsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
+import './Profile.css'
 
 const ProfilePage: React.FC = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    logout(); // Call the logout function from context
-    navigate('/login'); // Redirect to the login page
+    logout(); 
+    navigate('/login');
   };
 
   if (!user) {

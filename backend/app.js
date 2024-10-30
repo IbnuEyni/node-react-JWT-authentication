@@ -10,20 +10,18 @@ dotenv.config();
 connectDB();
 
 const corsOptions = {
-  origin: true, // Allow all origins
-  methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
-  allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
-  credentials: true // Allow credentials (if needed)
+  origin: true, 
+  methods: ["GET", "POST", "PUT", "DELETE"], 
+  allowedHeaders: ["Content-Type", "Authorization"], 
+  credentials: true 
 };
 
 const app = express();
 app.use(cors(corsOptions));
 app.use(express.json());
 
-// Routes
 app.use("/auth", authRoutes);
 
-// Protected Route (example)
 app.get("/profile", authenticateJWT, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select("-password");
