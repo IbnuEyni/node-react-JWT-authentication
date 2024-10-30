@@ -77,7 +77,7 @@ Follow these steps to set up and run the application locally.
 3. Open your browser and navigate to the specified port.
 
 ### Project Structure
-    ```bash
+
     project-root
     ├── authapp         # React frontend
     │   ├── src         # Source files
@@ -89,7 +89,7 @@ Follow these steps to set up and run the application locally.
     │   ├── routes      # API routes
     │   └── ...
     └── ...
-    ```
+    
 ### Contributing
 
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:

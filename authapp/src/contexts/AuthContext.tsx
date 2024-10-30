@@ -12,7 +12,8 @@ interface AuthContextType {
   user: User | null;
   setToken: (token: string | null) => void;
   setUser: (user: User | null) => void;
-  login: (email: string, password: string) => Promise<boolean>; // Define the login function type
+  login: (email: string, password: string) => Promise<boolean>; 
+  logout: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -44,16 +45,22 @@ const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
       }
 
       const data = await response.json();
-      setToken(data.token); // Set token
-      return true;
+      setToken(data.token); 
+      return true; 
     } catch (error) {
       console.error(error);
-      return false; // Return false on failure
+      return false; 
     }
   };
 
+  const logout = () => {
+    setToken(null); 
+    setUser(null); 
+    localStorage.removeItem("token"); 
+  };
+
   return (
-    <AuthContext.Provider value={{ token, user, setToken, setUser, login }}>
+    <AuthContext.Provider value={{ token, user, setToken, setUser, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
