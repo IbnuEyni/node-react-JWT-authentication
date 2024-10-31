@@ -4,7 +4,6 @@ This project is a full-stack web application that implements a secure authentica
 
 ## Table of Contents
 
-- [Demo](#demo)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
@@ -12,12 +11,7 @@ This project is a full-stack web application that implements a secure authentica
   - [Installation](#installation)
   - [Running the Application](#running-the-application)
 - [Project Structure](#project-structure)
-- [API Endpoints](#api-endpoints)
-- [License](#license)
-
-## Demo
-
-**Demo Link:** [https://example.com/demo](https://example.com/demo)
+- [Contributing](#contibuting)
 
 ## Features
 
@@ -49,8 +43,8 @@ Follow these steps to set up and run the application locally.
 ### Installation
 1. clone the repository
     ```bash
-    git clone https://github.com/IbnuEyni/React-with-Jwt-token.git
-    cd React-with-Jwt-token
+    git clone https://github.com/IbnuEyni/node-react-JWT-authentication.git
+    cd node-react-JWT-authentication
     ```
 2. Install backend dependencies:
     ```bash
